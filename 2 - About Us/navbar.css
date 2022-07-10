@@ -1,0 +1,403 @@
+html {
+  scroll-behavior: smooth;
+ }
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: .3s;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Questrial', sans-serif;
+}
+
+body {
+  font-family: 'Questrial', sans-serif;
+  height: 100%;
+}
+
+
+body::before {
+  width: 100%;
+  height: 100%;
+  content: " ";
+background-color: #333;
+  z-index: -9999;
+  background-size: cover;
+  background-position: bottom;
+  position: fixed;
+  top: 0; left: 0;
+}
+
+
+
+
+/****************** NAV BAR start  ******************/
+nav {
+  background-color: #49240be4;
+  height: 110px;
+  width: 100%;
+  box-shadow: 0px 1px 20px #333;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+
+}
+
+.logo {
+position: relative;
+  color: #DDBC95;
+  font-size: 45px;
+  line-height: 80px;
+  font-weight: bolder;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  float: left;
+  padding-top: 10px;
+}
+
+
+.logonav {
+    max-width: 100%;
+    height: 90px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-right: 10px;
+    float: left;
+}
+span { color: #eaeaea; }
+
+nav ul {
+    position: relative;
+  float: right;
+  margin-right: 20px;
+
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+  position: relative;
+  padding-top: 20px ;
+}
+
+nav ul li a {
+  color: #eee;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-left: 10px;
+  
+}
+
+nav ul p {
+  color: #ddd;
+  position: absolute;
+  right: 10px;
+  padding-top: 5px;
+}
+nav ul li a:hover, a.active {
+  background: none;
+  color: #56810c;;
+  text-decoration:none;
+}
+
+nav ul b {
+     color: rgba(255, 255, 255,1); 
+     text-shadow: 1px 1px 1px rgba(0,0,0,.8); }
+
+.highlight:hover {
+  background: rgba(255,255,255,.3);
+  transition: 1s;
+}
+
+
+.btn2 {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 0;
+    margin-top: 20px;
+    font-size: 20px;
+    text-decoration:none;
+}
+
+ .btn2:hover {
+    color: #030f27;
+    background: #fdbe33;
+    border-color: #fdbe33;
+    text-decoration:none;
+}
+
+
+.check-btn {
+  font-size: 30px;
+  color: #eee;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+   display: none;
+   opacity: 0;
+}
+#check {
+  display: none;
+  opacity: 0;
+}
+
+
+
+@media ( max-width: 1200px ) {
+
+.logo { 
+    padding-left: 10px;
+     font-size: 50px;
+     
+ }
+
+.logonav {
+    display: none;
+}
+  .check-btn {
+    display: block;
+    opacity: 1;
+  }
+
+  ul {
+    position: fixed;
+    width: 90%;
+    height: 450px;
+    background: #49240bec;
+    top: 35px;
+    left: -100%;
+    text-align: center;
+    box-shadow: 5px 0px 20px rgba(0,0,0,.5);
+    transition: all .5s;
+    
+  }
+
+  nav ul li {
+    display: block;
+    margin: 40px 0;
+    line-height: 1px;
+    position: static;
+  }
+
+  nav ul li a {
+    margin-bottom: 0px;
+  }
+
+
+  nav ul li a:hover, a.active {
+    background: none;
+    color: #56810c;;
+  }
+
+  nav ul li .highlight {
+    background: #56810c;;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  nav ul p {
+    color: #ddd;
+    border-top: 4px solid rgba(255,255,255,.8);
+    padding-top: 20px;
+    position: static;
+  }
+}
+
+
+/**************** FOOTER start  **************/
+.footer_dmd{
+	background: #49240be4;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer_dmd .footer-left,
+.footer_dmd .footer-center,
+.footer_dmd .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/*left*/
+.footer_dmd .footer-left{
+	width: 40%;
+}
+
+/* DMD */
+.footer_dmd h3{
+	color:  #DDBC95;
+	font: bold 50px  'Playfair Display', serif;
+	margin: 0 0 0 0 ;
+
+}
+
+.footer_dmd h3 span{
+	color:  rgb(255, 255, 255);
+}
+
+/* Footer ft.header */
+.footer_dmd .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 5px;
+	padding: 0 10;
+  margin-top: 0px;
+}
+
+.footer_dmd .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+  padding-left: 5px;
+  
+}
+
+.footer_dmd .footer-links a:hover{
+  color: #fdbe33;
+
+
+}
+
+.footer_dmd .footer-company-name{
+	color:  rgb(255, 255, 255);
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0 ;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+/* Footer Center */
+
+.footer_dmd .footer-center{
+	width: 35%;
+}
+
+.footer_dmd .footer-center i{
+	background-color: #49240B;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+
+.footer_dmd .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer_dmd .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer_dmd .footer-center p a{
+	color:  #56810c;
+  font-weight: bolder;
+	text-decoration: none;;
+  font-size: 15px;
+}
+
+.footer_dmd .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer_dmd.footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer_dmd .footer-right{
+	width: 20%;
+}
+
+.footer_dmd .footer-shop-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer_dmd .footer-shop-about span{
+	display: block;
+	color:  #56810c;
+	font-size: 18px;
+	font-weight: bolder;
+	margin-bottom: 10px;
+}
+
+.footer_dmd .footer-icons{
+	margin-top: 25px;
+}
+
+.footer_dmd .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color: none;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* responsive footer */
+
+@media (max-width: 1100px) {
+
+	.footer_dmd{
+		font: bold 14px sans-serif;
+	}
+
+	.footer_dmd .footer-left,
+	.footer_dmd .footer-center,
+	.footer_dmd .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer_dmd.footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+/*************** Footer End **************/
